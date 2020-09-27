@@ -12,3 +12,9 @@ summary: Những năm gần đây dfadfadfadf
 
 
 Hellow xin chao moi nguoi 
+
+
+<div class="imgcap">
+<img src ="\assets\LogReg2\dist.png" align = "center" width = "800">
+<div class = "thecap" align="center">Hình 4: Một số ví dụ về phân phối của các classes trong bài toàn multi-class</div>
+</div> 
