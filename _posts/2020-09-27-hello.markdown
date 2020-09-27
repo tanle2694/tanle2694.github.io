@@ -1,0 +1,14 @@
+---
+layout: post
+comments: true
+title:  "Bài 2: Hello"
+title2:  "2. Hello"
+date:   2020-09-26 00:22:00
+permalink: 2020/09/26/hello/
+mathjax: true
+img: /assets/introduce/aimldl.png
+summary: Những năm gần đây dfadfadfadf
+---
+
+
+Hellow xin chao moi nguoi 
