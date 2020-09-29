@@ -11,10 +11,10 @@ summary: Những năm gần đây dfadfadfadf
 ---
 
 
-Hellow xin chao moi nguoi 
+Hellow xin chao moi nguoi  \\( a_2 \\)
 
 
-<div class="imgcap">
-<img src ="\assets\LogReg2\dist.png" align = "center" width = "800">
-<div class = "thecap" align="center">Hình 4: Một số ví dụ về phân phối của các classes trong bài toàn multi-class</div>
-</div> 
+$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
+
+
+\\(z\_i\\)
