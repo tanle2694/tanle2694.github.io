@@ -188,4 +188,63 @@ Ví dụ:
 
 ### Create and subscribe to a Content Moderator resource
 1. Đăng nhập vào [Azure portal](https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DOP8ctPPZyTW4Lo--cV91bwin5gxNnjf7hTzuOInEHMjd9Gstt_AmItVcvNrKJABY8lzNFUG-UtrBmclbZ7b3MMxHXajSPkDdXW3Yn3aXbO1egw3soPvgdktFbmR8rDQZdyBFZAaEnzuu1ENoR3XcnEJHFYzc-394N8VynYkNz0A5aghCfGwwhpEaHwqfNbVRv9i6SVWjO-FSvX8qOmD75LA6k4eC7gAlO0_5MqiT-x7ig0vWjDl8cw6baZFuSH6xRH5zny2zUpeibxaDWbSQpMObfUv4CpL87G5_QDj94lL5mby4JEuuIuxhjNkkRh1otJ6mLNiwL3IecQdwNrTcyw6NiDLcGRFtS4dl1G-s8G3rA_8DVNFVBo-6k2EzVeCx&response_mode=form_post&nonce=637420158773489121.NDdkMDRjZWUtOTM0YS00ZGQwLWFlZmQtNTgyOWI0ODM1YWU3OTE4MjQ2OTEtN2Q4Zi00NjVhLWE2OWQtNjBiZWEyYWJjMWI2&redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&site_id=501430&client-request-id=c6e11265-8f84-414c-b550-acb90bac7695&x-client-SKU=ID_NET45&x-client-ver=5.3.0.0)
-2. 
+2. Ở góc trái chọn **Create a resource**
+    <div class="imgcap">
+        <div> 
+            <img src="/assets/azure_content_moderator/create_resource.png" align="center">
+            <div class="thecap"> Fig 1: Create resource</div>               
+        </div>
+    </div>
+3. Tại search box, gõ **Content Moderator** và sau đó ấn Enter 
+    <div class="imgcap">
+        <div> 
+            <img src="/assets/azure_content_moderator/content_moderator.png" align="center">
+            <div class="thecap"> Fig 2: Search Content Moderator</div>               
+        </div>
+    </div>
+4. Chọn **Create**
+    <div class="imgcap">
+        <div> 
+            <img src="/assets/azure_content_moderator/create.png" align="center">
+            <div class="thecap"> Fig 3: Create Content Moderator</div>               
+        </div>
+    </div>
+5. Setup tên cho resource, chọn subscription và địa điểm gần nhất 
+    <div class="imgcap">
+        <div> 
+            <img src="/assets/azure_content_moderator/setup_moderator.png" align="center">
+            <div class="thecap"> Fig 4: Setup resource</div>               
+        </div>
+    </div>
+6. Chọn **Create** và đợi vài phút
+
+### Copy the subscription key
+
+Để truy cập vào Content Moderator resource, chúng ta cần phải có subscription key:
+1. Ở góc trái dưới tag **RESOURCE MANAGEMENT** chọn **Keys and Endpoints**
+2. Copy subscription key values để dùng sau này
+    <div class="imgcap">
+            <div> 
+                <img src="/assets/azure_content_moderator/keys_and_endpoints.png" align="center">
+                <div class="thecap"> Fig 5: Resource management</div>               
+            </div>
+        </div>
+## Test text moderation
+Sau khi đã setup xong resource và có subscription key của resource, chúng ta sẽ tiến hành test thử API:
+- Vào [Content Moderator API Reference page](https://westus.dev.cognitive.microsoft.com/docs/services/57cf753a3f9b070c105bd2c1/operations/57cf753a3f9b070868a1f66f) 
+và chọn region để test API
+-  Điền **Ocp-Apim-Subscription-Key** vào và tiến hành run thử 
+    <div class="imgcap">
+        <div> 
+            <img src="/assets/azure_content_moderator/subscription_key.png" align="center">
+            <div class="thecap"> Fig 4: Setup resource</div>               
+        </div>
+    </div>
+Có thể run bằng Curl 
+```
+curl https:/REPLACE-WITH-YOUR-RESOURCE-NAME.cognitive.microsoft.com/contentmoderator/moderate/v1.0/ProcessText/Screen?classify=True HTTP/1.1 \
+     -X POST \
+     -H "Ocp-Apim-Subscription-Key: REPLACE-WITH-YOUR-RESOURCE-KEY" \ 
+     -H "Content-Type: text/plain" \
+     -d "Is this a crap email abcdef@abcd.com, phone: 6657789887, IP: 255.255.255.255, 1 Microsoft Way, Redmond, WA 98052"
+```
