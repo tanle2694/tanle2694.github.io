@@ -11,7 +11,7 @@ summary: Những năm gần đây dfadfadfadf
 ---
 
 
-Hellow xin chao moi nguoi  \\( a_2 \\)
+Hellow xin chao moi nguoi  $ a_2 $
 
 
 $$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$

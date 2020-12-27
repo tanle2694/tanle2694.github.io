@@ -135,7 +135,7 @@ to construct the higher resolution layers from the semantic rich layers. This wa
 </div>
 
 
-
+The next 
 
 ### Problem formulation
 Multi-scale feature fusion aims to aggregate features at different resolutions. Formally,
