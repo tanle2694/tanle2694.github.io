@@ -39,10 +39,7 @@ về business. Họ quá tập trung vào việc sản phẩm này làm được
 hàng.   
 - *Lack of quality data*: More data usually beats better algorithms(by Anand Rajaraman, Datawocky, 2008). Một model 
 đạt độ chính xác cao và đạt được business objectives phụ thuộc vào kích thước và chất lượng của dataset. Chỉ sử dụng data 
-từ public source thường không đảm bảo được chất lượng cần thiết. 
-
-
-
+từ public source thường không đảm bảo được chất lượng cần thiết. ?--
 
 
 
